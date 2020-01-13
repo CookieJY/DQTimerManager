@@ -1,0 +1,2 @@
+# DQTimerManager
+1.将timer封装到一个单独的类中，可以解决循环引用的问题，及时释放定时器和其引用类； 2.可以多处调用，方便管理 3.可以随时改变定时器的target和selector，更加灵活 比如线程A中调用DQTimerManager中的[target performSelector:selector withObject:nil]，线程B中修改了targer或者selector，在线程A中调用时及时target或者selcetor已经发生了改变，但performSelector仍然可以被正确的target和selector所调用
